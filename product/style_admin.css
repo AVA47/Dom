@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.top__header {
+    background-color: #fe980f;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.link a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menus {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menus a {
+    padding: 10px 20px;
+    background-color: #fe980f;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.main-admin-block-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-admin-block-right {
+    width: 70%;
+}
+
+.main-admin-block-right input,
+.main-admin-block-right textarea,
+.main-admin-block-right select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.main-admin-block-right-img__p {
+    margin-top: 20px;
+}
+
+.main-admin-block-right-img__p p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-admin-block-right-addTovar input,
+.main-admin-block-right-updateTovar button,
+.main-admin-block-delete__button button,
+.main-admin-block-right-updateVacancy input,
+.main-admin-block-right-addVacancy input {
+    padding: 10px 20px;
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main-admin-block-right-addTovar input:hover,
+.main-admin-block-right-updateTovar button:hover,
+.main-admin-block-delete__button button:hover,
+.main-admin-block-right-updateVacancy input:hover,
+.main-admin-block-right-addVacancy input:hover {
+    background-color: #ffa32a;
+    color: #600c00;
+}
+
+.information {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #fe980f;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    display: none;
+}
+.good{
+    font-size: 16px;
+    color: green;
+}
+.error{
+    font-size: 16px;
+    color: red;
+}
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        background-color: #333;
+    }
+}
+
+/* Стили для формы удаления товара */
+.main-admin-block-delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-admin-block-delete__p {
+    margin-bottom: 20px;
+}
+
+.main-admin-block-delete__p p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-admin-block-delete__input input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.main-admin-block-delete__button {
+    margin-top: 20px;
+}
+
+.main-admin-block-delete__button button {
+    padding: 10px 20px;
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для формы обновления товара */
+.main-admin-block-update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-admin-block-update__p {
+    margin-bottom: 20px;
+}
+
+.main-admin-block-update__p p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-admin-update-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-admin-update-inputs-id input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.main-admin-block-right-updateTovar button {
+    padding: 10px 20px;
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для таблицы товаров */
+.main-admin-block-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.main-admin-block__p_h p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.main-admin-block-right table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.main-admin-block-right thead {
+    background-color: #fe980f;
+    color: #fff;
+}
+
+.main-admin-block-right th,
+.main-admin-block-right td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.main-admin-block-right tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.main-admin-block-right tbody tr:hover {
+    background-color: #ddd;
+}
+
+.auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.auto-block {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0px 0px 119px -66px rgb(0 0 0 / 87%);
+}
+
+.auto-block__h {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auto-block h3 {
+    color: #fe980f;
+}
+
+.auto-block input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.auto-block__button-enter input {
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auto-block__button-enter input:hover {
+    background-color: #e07700;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text a {
+    color: #fe980f;
+    text-decoration: none;
+}
+
+.auto-block__button-cancel a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fe980f;
+}
+
+.auto-block__button-cancel a:hover {
+    color: #fe980f;
+}
+
+.auto-block1 {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0px 0px 119px -66px rgb(0 0 0 / 87%);
+    margin-top: 20px;
+    /* Add margin to separate from the login form */
+}
+
+.auto-block1__h {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auto-block1 h3 {
+    color: #fe980f;
+}
+
+.auto-block1 input,
+.auto-block1 select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.auto-block1__button-enter input {
+    background-color: #fe980f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auto-block1__button-enter input:hover {
+    background-color: #e07700;
+}
+
+.auto-block1 .text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auto-block1 .text a {
+    color: #fe980f;
+    text-decoration: none;
+}
+
+.auto-block1__button-cancel a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fe980f;
+}
+
+.auto-block1__button-cancel a:hover {
+    color: #fe980f;
+}
+
+.table tbody {
+    text-align: justify;
+}
